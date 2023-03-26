@@ -25,7 +25,7 @@ Whisper可以根据录音生成文本。
 
 * ChatGPT不能联网获取最新知识，但是ChatGPT推出了[ChatGPT plugin](https://openai.com/blog/chatgpt-plugins)，可以通过插件的方式获取最新知识。
 
-  ![](/Users/zhangjincheng/Desktop/zhangjincheng/github/gpt-tutorial/lecture02_1.png)
+  ![](./lecture02_1.png)
 
 ### ChatGPT
 
