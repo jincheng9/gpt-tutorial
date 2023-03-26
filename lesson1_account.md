@@ -240,4 +240,4 @@ javascript:
 
 ## References
 
-* https://sms-activate.org/cn/info/ChatGPT
+* https://mirror.xyz/boxchen.eth/9O9CSqyKDj4BKUIil7NC1Sa1LJM-3hsPqaeW_QjfFBc
