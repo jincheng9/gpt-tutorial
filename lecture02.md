@@ -2,6 +2,9 @@
 
 ## Prompt和Completion
 
+* prompt可以理解为GPT模型的输入
+* completion可以理解为GPT模型的输出结果
+
 ## Model
 
 OpenAI支持包括GPT-4, GPT-3.5, DALL-E, Whisper等众多Model，每个Model有各自的适用场景。
@@ -30,10 +33,28 @@ Whisper可以根据录音生成文本。
 
 ## API
 
-官方支持Python和NodeJS，其它语言目前是社区提供。
+官方支持发送裸的http请求来获取结果，同时封装了Python和Node.js的library。
 
-* [Python](https://github.com/openai/openai-python)
+其它语言的library官方没有开发，由社区提供。
 
-* [NodeJS](https://github.com/openai/openai-node)
+* [Python API](https://github.com/openai/openai-python)
+
+* [NodeJS API](https://github.com/openai/openai-node)
 
 * [其它语言的API](https://platform.openai.com/docs/libraries)
+
+注意：从2023年3月1日开始，OpenAI不会把用户**通过API发送的数据**放到模型的训练集里来训练和优化模型。
+
+并且，通过API发送的数据只保留最多30天，超过30天后，通过API发送的数据会被删除。
+
+详情参考：[API Data Usage Policies](https://openai.com/policies/api-data-usage-policies)。
+
+> Starting on March 1, 2023, we are making two changes to our data usage and retention policies:
+>
+> 1. OpenAI will not use data submitted by customers via our API to train or improve our models, unless you explicitly decide to share your data with us for this purpose. You can [opt-in to share data](https://docs.google.com/forms/d/e/1FAIpQLSevgtKyiSWIOj6CV6XWBHl1daPZSOcIWzcUYUXQ1xttjBgDpA/viewform).
+> 2. Any data sent through the API will be retained for abuse and misuse monitoring purposes for a maximum of 30 days, after which it will be deleted (unless otherwise required by law).
+>
+> Note that this data policy does not apply to OpenAI's Non-API consumer services like [ChatGPT](https://chat.openai.com/) or [DALL·E Labs](https://labs.openai.com/). You can learn more about these policies in our [data usage for consumer services FAQ](https://help.openai.com/en/articles/7039943-data-usage-for-consumer-services-faq).
+
+
+
