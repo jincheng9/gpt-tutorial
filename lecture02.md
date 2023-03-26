@@ -27,6 +27,16 @@ Whisper可以根据录音生成文本。
 
   ![](/Users/zhangjincheng/Desktop/zhangjincheng/github/gpt-tutorial/lecture02_1.png)
 
+### ChatGPT
+
+基于GPT-3.5的gpt-3.5-turbo这个Model实现。后续可能会替换为最新的GPT-4
+
+* [在线对话入口](https://chat.openai.com/chat)
+
+### DALL-E
+
+* [画图入口](https://labs.openai.com/)
+
 ## Token
 
 * [token个数统计和token分割可视化](https://platform.openai.com/tokenizer)
