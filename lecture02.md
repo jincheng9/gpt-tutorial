@@ -40,6 +40,7 @@ Whisper可以根据录音生成文本。
 ## Token
 
 * [token个数统计和token分割可视化](https://platform.openai.com/tokenizer)
+* [每个Model支持的最大token](https://platform.openai.com/docs/models/overview)
 
 ## API
 
