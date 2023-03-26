@@ -56,5 +56,6 @@ Whisper可以根据录音生成文本。
 >
 > Note that this data policy does not apply to OpenAI's Non-API consumer services like [ChatGPT](https://chat.openai.com/) or [DALL·E Labs](https://labs.openai.com/). You can learn more about these policies in our [data usage for consumer services FAQ](https://help.openai.com/en/articles/7039943-data-usage-for-consumer-services-faq).
 
-
+* [配置或者查看API Keys](https://platform.openai.com/account/api-keys)
+* [查看Organization ID](https://platform.openai.com/account/org-settings)
 
