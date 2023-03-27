@@ -54,7 +54,10 @@ Whisper可以根据录音生成文本。
 
 * [其它语言的API](https://platform.openai.com/docs/libraries)
 
-**注意**：
+* [配置或者查看API Keys](https://platform.openai.com/account/api-keys)
+* [查看Organization ID](https://platform.openai.com/account/org-settings)
+
+##  数据隐私和安全
 
 * 从2023年3月1日开始，OpenAI不会把用户**通过API发送的数据**放到模型的训练集里来训练和优化模型。
 
@@ -75,6 +78,5 @@ Whisper可以根据录音生成文本。
 
 ![](./lecture02_2.png) 
 
-* [配置或者查看API Keys](https://platform.openai.com/account/api-keys)
-* [查看Organization ID](https://platform.openai.com/account/org-settings)
+
 
