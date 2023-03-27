@@ -54,7 +54,9 @@ Whisper可以根据录音生成文本。
 
 * [其它语言的API](https://platform.openai.com/docs/libraries)
 
-注意：从2023年3月1日开始，OpenAI不会把用户**通过API发送的数据**放到模型的训练集里来训练和优化模型。
+**注意**：
+
+* 从2023年3月1日开始，OpenAI不会把用户**通过API发送的数据**放到模型的训练集里来训练和优化模型。
 
 并且，通过API发送的数据只保留最多30天，超过30天后，通过API发送的数据会被删除。
 
@@ -66,6 +68,12 @@ Whisper可以根据录音生成文本。
 > 2. Any data sent through the API will be retained for abuse and misuse monitoring purposes for a maximum of 30 days, after which it will be deleted (unless otherwise required by law).
 >
 > Note that this data policy does not apply to OpenAI's Non-API consumer services like [ChatGPT](https://chat.openai.com/) or [DALL·E Labs](https://labs.openai.com/). You can learn more about these policies in our [data usage for consumer services FAQ](https://help.openai.com/en/articles/7039943-data-usage-for-consumer-services-faq).
+
+
+
+* 如果是在网站上对话，没有用API，那网站上对话内容是有可能被OpenAI拿去做训练的。下图是官网的说明，不要在网站上输入敏感信息。
+
+![](./lecture02_2.png) 
 
 * [配置或者查看API Keys](https://platform.openai.com/account/api-keys)
 * [查看Organization ID](https://platform.openai.com/account/org-settings)
