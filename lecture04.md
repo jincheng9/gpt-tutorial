@@ -50,10 +50,9 @@ role: assistant，表示给出completion响应的一方，实际上就是ChatGPT
 ## 注意事项
 
 * 目前ChatGPT的API没有记忆上下文的功能。
+  * 如果要实现多轮对话的上下文关联，需要开发者记录下ChatGPT返回的completion结果，然后每次发送prompt的时候，把之前所有的prompt和completion一起发送给ChatGPT。否则ChatGPT只能实现单轮对话(single-turn conversation)。
+  * 这种实现上下文关联的多轮对话的方案带来的问题就是后面发送prompt请求时，携带的token数量会越来越多。
 
-​	如果要实现上下文关联，需要开发者记录下ChatGPT返回的completion结果，然后发送下次prompt的时候，把	之前的所有prompt和completion组合在一起，发送给ChatGPT。
-
-​	否则ChatGPT只能实现单轮对话(single-turn conversation)。
 
 ## References
 
