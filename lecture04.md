@@ -2,9 +2,15 @@
 
 本API帮助手册针对的是ChatGPT。
 
+官方API只有Python和Node.js版本。
+
 https://platform.openai.com/docs/guides/chat
 
 https://platform.openai.com/docs/api-reference/chat
+
+其它编程语言的API由社区维护，可以参考如下链接：
+
+社区API：https://platform.openai.com/docs/libraries/community-libraries
 
 ## token限制
 
@@ -46,6 +52,8 @@ role: system，message里role为system，是为了让ChatGPT在对话过程中�
 role: user，表示提交prompt的一方。
 
 role: assistant，表示给出completion响应的一方，实际上就是ChatGPT本身。
+
+
 
 ## 注意事项
 
