@@ -53,7 +53,21 @@ role: user，表示提交prompt的一方。
 
 role: assistant，表示给出completion响应的一方，实际上就是ChatGPT本身。
 
+## stream参数
 
+如果在ChatGPT官网和ChatGPT对话，你会发现ChatGPT的回答不是一次性全部给出，是分段给出的。
+
+这是因为后台返回的completion就是分段给出的，模型计算出一部分结果就返回一部分。
+
+通过API同样可以达到这个效果，需要用到stream参数。
+
+stream: boolean, Optional, Defaults to false
+
+如果stream参数设置为False，那ChatGPT会计算出全部结果后一次性返回，可能请求的耗时会比较长，影响用户体验。
+
+如果stream参数设置为True，那就会返回增量结果，最后会返回一个标记，表示响应已经结束。
+
+使用stream参数返回增量结果的Python代码样例：https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb
 
 ## 注意事项
 
