@@ -6,25 +6,19 @@
 
 https://platform.openai.com/docs/guides/chat
 
-https://platform.openai.com/docs/api-reference/chat
+API Reference: https://platform.openai.com/docs/api-reference/chat
 
 其它编程语言的API由社区维护，可以参考如下链接：
 
 社区API：https://platform.openai.com/docs/libraries/community-libraries
 
-## token限制
+## Model限制
 
-单次请求的prompt和返回的completion的token加起来不能超过模型的context length。
+Chat API只支持特定的Model
 
-每个model支持的最大token数量参考：https://platform.openai.com/docs/models
+https://platform.openai.com/docs/models/model-endpoint-compatibility
 
-## rate limit
-
-RPM: requests per minute
-
-TPM: tokens per minute
-
-参考：https://platform.openai.com/docs/guides/rate-limits/overview
+在调用Chat API的时候，model参数的值要遵循上面链接里的说明。
 
 ## role
 
@@ -68,6 +62,20 @@ stream: boolean, Optional, Defaults to false
 如果stream参数设置为True，那就会返回增量结果，最后会返回一个标记，表示响应已经结束。
 
 使用stream参数返回增量结果的Python代码样例：https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb
+
+## token限制
+
+单次请求的prompt和返回的completion的token加起来不能超过模型的context length。
+
+每个model支持的最大token数量参考：https://platform.openai.com/docs/models
+
+## rate limit
+
+RPM: requests per minute
+
+TPM: tokens per minute
+
+参考：https://platform.openai.com/docs/guides/rate-limits/overview
 
 ## 注意事项
 
