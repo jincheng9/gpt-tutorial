@@ -25,7 +25,7 @@
 
 ## 其它模型收费
 
-参考 https://openai.com/pricing。
+参考 https://openai.com/pricing
 
 ## 注意事项
 
