@@ -4,6 +4,7 @@
 * [Lecture 2: 基本概念和常用工具](./lecture02.md)
 * [Lecture 3: 收费说明](./lecture03.md)
 * [Lecture 4: ChatGPT API帮助手册](./lecture04.md)
+* [FAQ: 常见问题](./chatgpt_faq.md)
 
 
 
