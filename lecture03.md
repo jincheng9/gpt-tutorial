@@ -4,11 +4,14 @@
 
   ![](./lecture03_1.png) 
 
-* 通过API来使用ChatGPT等不同的模型需要收费，根据token数量收费，不同的Model收费标准不一样。
+* 通过API来使用ChatGPT等不同的OpenAI模型需要收费，根据token数量收费，不同的Model收费标准不一样。
 
 >  Multiple models, each with different capabilities and price points. Prices are per 1,000 tokens. You can think of tokens as pieces of words, where 1,000 tokens is about 750 words. This paragraph is 35 tokens.
 
-按照1000个token作为单位收费，每1000个token约等于750个单词。
+按照1000个token作为单位收费：
+
+* 英文场景下，每1000个token约等于750个单词，也就是1 token ~= 0.75 word。
+* 中文场景下，一个汉子约等于2-3个token。
 
 ##  GPT-4收费
 
