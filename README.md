@@ -12,3 +12,8 @@
 
 * [Lecture1: 文心一言网站使用和API使用申请](./baidu/lecture01.md)
 
+
+
+## 开源模型
+
+* [开源模型汇总](./open-source.md)
