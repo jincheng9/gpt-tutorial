@@ -21,3 +21,5 @@
 申请地址：https://cloud.baidu.com/survey_summit/wenxin.html?track=C816552
 
 ![](./lecture01_1.png) 
+
+updated 2023.04.16: 目前百度文心一言由于算力资源紧缺，API权限申请需要排队，暂时优先考虑签约了合作协议的企业客户。
