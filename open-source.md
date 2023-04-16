@@ -16,7 +16,7 @@ Alpaca, Vicuna, Koala都是基于LLaMA衍生而来的，LLaMA目前仅用于学�
 
 ## 术语
 
-RLHF: Reinforcement Learning from Human Feedback)
+RLHF: Reinforcement Learning from Human Feedback
 
 LLM: Large Language Model
 
