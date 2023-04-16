@@ -27,3 +27,4 @@ LLM: Large Language Model
 * https://mp.weixin.qq.com/s/kjzRzoUenP0NYa1A9lS7Aw
 * https://mp.weixin.qq.com/s/_9JevS70pRqEmPRbVVM9Vw
 * https://zhuanlan.zhihu.com/p/614766286
+* https://mp.weixin.qq.com/s/M-ToNk8SABoP2JG0xLUBxQ
