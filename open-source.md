@@ -6,6 +6,14 @@ RLHF: Reinforcement Learning from Human Feedback
 
 LLM: Large Language Model
 
+
+
+## 开源链接
+
+* 悟道：https://github.com/BAAI-WuDao/Model
+
+
+
 ## References
 
 * https://medium.com/geekculture/list-of-open-sourced-fine-tuned-large-language-models-llm-8d95a2e0dc76
