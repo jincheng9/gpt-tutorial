@@ -22,7 +22,7 @@
 | Alpaca     | Stanford                                    | 70亿                                            | 52k条问答指令数据，指令数据来源于OpenAI的API返回结果    | 500美元数据成本+100美元训练成本                              |
 | Vicuna     | UC Berkeley, CMU, Stanford, UCSD and MBZUAI | 130亿                                           | 70k条问答指令数据，指令数据来源于用户分享出来的对话记录 | 300美元                                                      |
 | Koala      | UC Berkeley                                 | 130亿                                           | 500k条问答直录功能数据，指令数据来源于网上公开数据集    | 在公共云计算平台上，预期训练成本不超过100美元。一台 Nvidia DGX 服务器与8个A100 GPU，需要6个小时训练完成2个epochs。 |
-| Bloom      | BigScience                                  | 1760亿                                          | 3660亿                                                  | 384 80GB A100 GPUs 训练3.5个月                               |
+| Bloom      | BigScience                                  | 1760亿                                          | 3660亿                                                  | 384 80GB A100 GPUs 训练3.5个月[数据来源](https://huggingface.co/blog/bloom-megatron-deepspeed) |
 | Dolly 2.0  | Databricks                                  | 120亿                                           | 15k条问答指令数据，指令数据来源于Databricks员工         | 不到30美元                                                   |
 | ChatGLM    | 清华大学KEG 实验室和智谱AI                  | 60亿和1300亿共2种参数规模                       | 4000亿左右，中文和英文token各2000亿                     | 数百万人民币                                                 |
 | 鹏程·盘古α | 鹏程实验室、华为                            | 26亿、130亿和2000亿共3种参数规模                | 2500亿                                                  | 2048 块昇腾处理器                                            |
