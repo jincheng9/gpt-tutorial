@@ -23,3 +23,4 @@ LLM: Large Language Model
 * https://zhuanlan.zhihu.com/p/614766286
 * https://mp.weixin.qq.com/s/M-ToNk8SABoP2JG0xLUBxQ
 * https://github.com/zhengzangw/awesome-huge-models
+* https://github.com/eugeneyan/open-llms
