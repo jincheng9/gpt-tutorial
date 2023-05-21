@@ -23,7 +23,8 @@
 | Vicuna     | UC Berkeley, CMU, Stanford, UCSD and MBZUAI | 130亿                                           | 70k条问答指令数据，指令数据来源于用户分享出来的对话记录      | 300美元                                                      | 中英文         |
 | Koala      | UC Berkeley                                 | 130亿                                           | 500k条问答直录功能数据，指令数据来源于网上公开数据集         | 在公共云计算平台上，预期训练成本不超过100美元。一台 Nvidia DGX 服务器与8个A100 GPU，需要6个小时训练完成2个epochs。 | 中英文         |
 | Bloom      | BigScience                                  | 1760亿                                          | 3660亿                                                       | 384 80GB A100 GPUs 训练3.5个月[数据来源](https://huggingface.co/blog/bloom-megatron-deepspeed) |                |
-| BLOOMChat  | SambaNova and Together                      | 1760亿                                          | [OIG](https://huggingface.co/datasets/laion/OIG) from [OpenChatKit](https://www.together.xyz/blog/openchatkit) , [Dolly 2.0](https://www.databricks.com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm), and [OASST1](https://huggingface.co/datasets/OpenAssistant/oasst1) datasets | 基于Bloom做fine tune                                         | 中英文         |
+| Bloomz     |                                             | 1760亿                                          |                                                              |                                                              |                |
+| BLOOMChat  | SambaNova and Together                      | 1760亿                                          | [OIG](https://huggingface.co/datasets/laion/OIG) from [OpenChatKit](https://www.together.xyz/blog/openchatkit) , [Dolly 2.0](https://www.databricks.com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm), and [OASST1](https://huggingface.co/datasets/OpenAssistant/oasst1) datasets | 基于Bloom在指定数据集上做fine tune                           | 中英文         |
 | StableLM   | Stability AI                                | 30亿、70亿、150亿和300亿                        | 1.5万亿                                                      | 未公布                                                       | 英文           |
 | Dolly 2.0  | Databricks                                  | 120亿                                           | 15k条问答指令数据，指令数据来源于Databricks员工              | 不到30美元                                                   |                |
 | ChatGLM    | 清华大学KEG 实验室和智谱AI                  | 60亿和1300亿共2种参数规模                       | 4000亿左右，中文和英文token各2000亿                          | 数百万人民币                                                 | 中英文         |
@@ -40,3 +41,9 @@
 # 开源大语言模型
 
 * [BLOOMChat: a New Open Multilingual Chat LLM](./open-source-llm-article/llm0-bloomchat.md)
+
+
+
+## AI知识
+
+* [Nvidia GPU显卡有哪些型号](./gpu/gpu0-nvidia.md)
