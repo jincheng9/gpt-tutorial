@@ -76,7 +76,7 @@ XuanYuan提出了一种全新的训练方法hybrid-tuning，不再分为以上2�
 
 [![f119d2cf76493fc383aef1e45](https://user-images.githubusercontent.com/10808269/240129265-18ae1d5f-c9be-4813-8386-db6dc5f4896e.png)](https://user-images.githubusercontent.com/10808269/240129265-18ae1d5f-c9be-4813-8386-db6dc5f4896e.png)
 
-BloomChat的我在上周的文章里介绍过，是国外开源的支持多语言(包括中文)、可商用的大语言模型。
+BloomChat的我在之前的文章里介绍过，是国外开源的支持多语言(包括中文)、可商用的大语言模型，了解详情可以参考[可商用、开源、支持多语言的千亿参数大语言模型](https://mp.weixin.qq.com/s?__biz=Mzg2MTcwNjc1Mg==&mid=2247484766&idx=1&sn=ccecd302b889a73b46c8d804f713bc25&chksm=ce124a31f965c32749d27391ecbfd185ae48f9a1e30aeed5d5fc2b0de97b3f06e9116d85e61b&token=2139363355&lang=zh_CN#rd)。
 
 
 
@@ -94,7 +94,7 @@ BloomChat的我在上周的文章里介绍过，是国外开源的支持多语�
 
 ## 总结
 
-轩辕是国内首个开源的千亿级中文对话大模型，同时也是首个针对中文金融领域优化的千亿级开源对话大模型，不能商用。
+轩辕是国内首个开源的千亿级中文对话大模型，同时也是首个针对中文金融领域优化的千亿级开源对话大模型，**不能商用**。
 
 文章和示例代码开源在GitHub: [GPT实战教程](https://github.com/jincheng9/gpt-tutorial)，可以看到所有主流的开源LLM。
 
