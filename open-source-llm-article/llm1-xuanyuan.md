@@ -110,7 +110,9 @@ BloomChat的我在之前的文章里介绍过，是国外开源的支持多语�
 
 * XuanYuan 2.0: https://arxiv.org/pdf/2305.12002.pdf
 
-* XuanYuan GitHub: https://github.com/Duxiaoman-DI/XuanYuan
+* XuanYuan on GitHub: https://github.com/Duxiaoman-DI/XuanYuan
+
+* XuanYuan on HuggingFace: https://huggingface.co/xyz-nlp/XuanYuan2.0
 
 * Self-Instruct: https://arxiv.org/pdf/2212.10560.pdf
 
