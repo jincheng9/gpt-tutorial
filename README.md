@@ -41,6 +41,7 @@
 # 开源大语言模型
 
 * [BLOOMChat: a New Open Multilingual Chat LLM](./open-source-llm-article/llm0-bloomchat.md)
+* [轩辕：首个千亿级中文金融对话模型](./open-source-llm-article/llm1-xuanyuan.md)
 
 
 
