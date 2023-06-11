@@ -9,7 +9,7 @@
 
 OpenAI支持包括GPT-4, GPT-3.5, DALL-E, Whisper等众多Model，每个Model有各自的适用场景。
 
-比如GPT-4是基于GPT-3.5衍生出来的，比GPT-3.5更强大。
+比如GPT-4是基于GPT-3.5衍生出来的，比GPT-3.5更强大，有更多参数，支持多模态，可以根据图片输出文本。
 
 DALL-E可以根据文本生成图片。
 
