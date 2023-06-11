@@ -58,6 +58,16 @@ Whisper可以根据录音生成文本。
 * [配置或者查看API Keys](https://platform.openai.com/account/api-keys)
 * [查看Organization ID](https://platform.openai.com/account/org-settings)
 
+## Embedding
+
+> In machine learning, an embedding is a way of representing data as points in n-dimensional space so that similar data points cluster together.
+>
+> Embeddings are a way of representing data–almost any kind of data, like text, images, videos, users, music, whatever–as points in space where the locations of those points in space are semantically meaningful.
+
+Embedding本质上就是把输入(例如文本、图片、视频等)转换为一个固定长度的向量进行表示。
+
+参考：https://daleonai.com/embeddings-explained
+
 ##  数据隐私和安全
 
 * 从2023年3月1日开始，OpenAI不会把用户**通过API发送的数据**放到模型的训练集里来训练和优化模型。
