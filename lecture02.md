@@ -9,9 +9,9 @@
 
 OpenAI支持包括GPT-4, GPT-3.5, DALL-E, Whisper等众多Model，每个Model有各自的适用场景。
 
-比如GPT-4是基于GPT-3.5衍生出来的，比GPT-3.5更强大，未来还会支持根据文本输入生成图片。
+比如GPT-4是基于GPT-3.5衍生出来的，比GPT-3.5更强大。
 
-DALL-E可以根据文本生成或者编辑图片。
+DALL-E可以根据文本生成图片。
 
 Whisper可以根据录音生成文本。
 
@@ -29,7 +29,7 @@ Whisper可以根据录音生成文本。
 
 ### ChatGPT
 
-基于GPT-3.5的gpt-3.5-turbo这个Model实现。后续可能会替换为最新的GPT-4
+免费版的ChatGPT基于GPT-3.5Model实现，升级为Plus会员可以使用最新的GPT-4。
 
 * [在线对话入口](https://chat.openai.com/chat)
 
