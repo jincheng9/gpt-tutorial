@@ -31,7 +31,7 @@
 | 鹏程·盘古α  | 鹏程实验室、华为                            | 26亿、130亿和2000亿共3种参数规模                | 2500亿                                                       | 2048 块昇腾处理器                                            | 中英文         |
 | MOSS        | 复旦                                        | 160亿参数                                       | 约7000亿中英文                                               | 未公布。整体技术偏弱一些，暂时无法和ChatGLM相比。            | 中英文         |
 | MPT         | Mosaic ML                                   | 70亿参数                                        | 1万亿                                                        | 20万美金，训练9.5天，[详细介绍](https://www.mosaicml.com/blog/mpt-7b) |                |
-| baichuan-7B | BaiChuan-Inc                                | 70亿                                            | 1.2万亿                                                      | 千卡集群，成本未知                                           | 中英文         |
+| baichuan-7B | BaiChuan-Inc                                | 70亿参数                                        | 1.2万亿                                                      | 千卡集群，成本未知                                           | 中英文         |
 
 * Alpaca, Vicuna, Koala都是基于LLaMA衍生而来的，LLaMA目前仅用于学术、社会公益项目，不能用于商业化项目。
 * Dolly 2.0是基于15k指令数据做fine-tune，其依赖的base model是 [EleutherAI’s](https://www.eleuther.ai/) [Pythia-12b](https://huggingface.co/EleutherAI/pythia-12b)。
