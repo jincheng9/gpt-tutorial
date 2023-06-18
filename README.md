@@ -5,6 +5,7 @@
 * [Lecture 3: 收费说明](./lecture03.md)
 * [Lecture 4: ChatGPT API帮助手册](./lecture04.md)
 * [FAQ: 常见问题](./chatgpt_faq.md)
+* [ChatGPT API重大升级](./chatgpt/blog01.md)
 
 
 
@@ -36,6 +37,7 @@
 * Alpaca, Vicuna, Koala都是基于LLaMA衍生而来的，LLaMA目前仅用于学术、社会公益项目，不能用于商业化项目。
 * Dolly 2.0是基于15k指令数据做fine-tune，其依赖的base model是 [EleutherAI’s](https://www.eleuther.ai/) [Pythia-12b](https://huggingface.co/EleutherAI/pythia-12b)。
 * MPT-7B可商用。
+* baichuan-7B可商用，支持中英文。
 
 
 
