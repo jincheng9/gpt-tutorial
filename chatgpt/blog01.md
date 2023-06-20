@@ -2,18 +2,16 @@
 
 ## 背景
 
-We released `gpt-3.5-turbo` and `gpt-4` earlier this year, and in only a short few months, have seen [incredible applications](https://openai.com/customer-stories) built by developers on top of these models.
+OpenAI官方在2023.06.13发布了API层面的重磅升级，主要变化如下：
 
-Today, we’re following up with some exciting updates:
+* 在Chat Completions这个API里支持了函数调用。
+* 更新了`gpt-4`和`gpt-3.5-turbo`模型。
+* `gpt-3.5-turbo`支持16k token数量的上下文长度，之前只支持4096个token。
+* embedding model的使用成本降低75%。
+* `gpt-3.5-turbo`模型的输入token的成本降低25%，从原来的0.002美金 / 1000 token，下降为0.0015美金 / 1000 token。
+* 2023.09.13会下线`gpt-3.5-turbo-0301`、`gpt-4-0314`和`gpt-4-32k-0314` 模型，如果过了这个时间点，调用这些模型会失败。
 
-- new function calling capability in the Chat Completions API
-- updated and more steerable versions of `gpt-4` and `gpt-3.5-turbo`
-- new 16k context version of `gpt-3.5-turbo` (vs the standard 4k version)
-- 75% cost reduction on our state-of-the-art embeddings model
-- 25% cost reduction on input tokens for `gpt-3.5-turbo`
-- announcing the deprecation timeline for the `gpt-3.5-turbo-0301` and `gpt-4-0314` models
-
-All of these models come with the same data privacy and security guarantees we introduced on March 1 — customers own all outputs generated from their requests and their API data will not be used for training.
+上面提到的这些模型都严格遵循2023.03.01发布的隐私和安全规定，用户通过API发送的数据和API返回的数据不会用于OpenAI大模型的训练。
 
 ## Function calling
 
