@@ -13,36 +13,25 @@ OpenAI官方在2023.06.13发布了API层面的重磅升级，主要变化如下�
 
 上面提到的这些模型都严格遵循2023.03.01发布的隐私和安全规定，用户通过API发送的数据和API返回的数据不会用于OpenAI大模型的训练。
 
-## Function calling
+## 函数调用示例
 
-Developers can now describe functions to `gpt-4-0613` and `gpt-3.5-turbo-0613`, and have the model intelligently choose to output a JSON object containing arguments to call those functions. This is a new way to more reliably connect GPT's capabilities with external tools and APIs.
+场景：我们希望ChatGPT告诉现在Boston的天气状况。
 
-These models have been fine-tuned to both detect when a function needs to be called (depending on the user’s input) and to respond with JSON that adheres to the function signature. Function calling allows developers to more reliably get structured data back from the model. For example, developers can:
+如果只靠ChatGPT是无法实现这个功能的，因为ChatGPT的训练数据只截止到2021年9月，无法知道现在的天气。
 
-- Create chatbots that answer questions by calling external tools (e.g., like ChatGPT Plugins)
+那应该怎么使用ChatGPT来实现这个功能呢？
 
-Convert queries such as “Email Anya to see if she wants to get coffee next Friday” to a function call like `send_email(to: string, body: string)`, or “What’s the weather like in Boston?” to `get_current_weather(location: string, unit: 'celsius' | 'fahrenheit')`.
+我们可以自己定义一个函数来获取当天某个城市的天气状况，ChatGPT只需要根据用户的提问生成我们自定义的函数的参数值(也叫实参)，那我们就可以调用自定义函数拿到我们想要的结果，最后把结果送回给ChatGPT做一个汇总，把汇总的结论返回给用户即可。
 
-- Convert natural language into API calls or database queries
+>  用户提问 -> ChatGPT生成函数的实参 -> 开发者调用自定义函数 -> 把结果送给ChatGPT做结论汇总 -> 返回结论给用户
 
-Convert “Who are my top ten customers this month?” to an internal API call such as `get_customers_by_revenue(start_date: string, end_date: string, limit: int)`, or “How many orders did Acme, Inc. place last month?” to a SQL query using `sql_query(query: string)`.
 
-- Extract structured data from text
-
-Define a function called `extract_people_data(people: [{name: string, birthday: string, location: string}])`, to extract all people mentioned in a Wikipedia article.
-
-These use cases are enabled by new API parameters in our `/v1/chat/completions` endpoint, `functions` and `function_call`, that allow developers to describe functions to the model via JSON Schema, and optionally ask it to call a specific function. Get started with our [developer documentation](https://platform.openai.com/docs/guides/gpt/function-calling) and [add evals](https://github.com/openai/evals) if you find cases where function calling could be improved
-
-# Function calling例子
 
 What’s the weather like in Boston right now?
 
 Step 1·OpenAI API
 
 Call the model with functions and the user’s input
-
-- [Request](https://openai.com/blog/function-calling-and-other-api-updates#)
-- [Response](https://openai.com/blog/function-calling-and-other-api-updates#)
 
 ```bash
 curl https://api.openai.com/v1/chat/completions -u :$OPENAI_API_KEY -H 'Content-Type: application/json' -d '{
@@ -73,27 +62,50 @@ curl https://api.openai.com/v1/chat/completions -u :$OPENAI_API_KEY -H 'Content-
 }'
 ```
 
+
+
+返回结果
+
+```bash
+{
+  "id": "chatcmpl-123",
+  ...
+  "choices": [{
+    "index": 0,
+    "message": {
+      "role": "assistant",
+      "content": null,
+      "function_call": {
+        "name": "get_current_weather",
+        "arguments": "{ \"location\": \"Boston, MA\"}"
+      }
+    },
+    "finish_reason": "function_call"
+  }]
+}
+```
+
+
+
 Step 2·Third party API
 
 Use the model response to call your API
-
-
-
-- [Request](https://openai.com/blog/function-calling-and-other-api-updates#)
-- [Response](https://openai.com/blog/function-calling-and-other-api-updates#)
 
 ```plaintext
 curl https://weatherapi.com/...
 ```
 
+返回结果
+
+```bash
+{ "temperature": 22, "unit": "celsius", "description": "Sunny" }
+```
+
+
+
 Step 3·OpenAI API
 
 Send the response back to the model to summarize
-
-
-
-- [Request](https://openai.com/blog/function-calling-and-other-api-updates#)
-- [Response](https://openai.com/blog/function-calling-and-other-api-updates#)
 
 ```bash
 curl https://api.openai.com/v1/chat/completions -u :$OPENAI_API_KEY -H 'Content-Type: application/json' -d '{
@@ -126,13 +138,52 @@ curl https://api.openai.com/v1/chat/completions -u :$OPENAI_API_KEY -H 'Content-
 }'
 ```
 
+返回结果：
 
+```bash
+{
+  "id": "chatcmpl-123",
+  ...
+  "choices": [{
+    "index": 0,
+    "message": {
+      "role": "assistant",
+      "content": "The weather in Boston is currently sunny with a temperature of 22 degrees Celsius.",
+    },
+    "finish_reason": "stop"
+  }]
+}
+```
 
+最后输出结果：
 
-
+```bash
 The weather in Boston is currently sunny with a temperature of 22 degrees Celsius.
+```
 
-Since the alpha release of ChatGPT plugins, we have learned much about making tools and language models work together safely. However, there are still open research questions. For example, a proof-of-concept exploit illustrates how untrusted data from a tool’s output can instruct the model to perform unintended actions. We are working to mitigate these and other risks. Developers can protect their applications by only consuming information from trusted tools and by including user confirmation steps before performing actions with real-world impact, such as sending an email, posting online, or making a purchase.
+
+
+## 自定义函数调用
+
+开发者可以
+
+Developers can now describe functions to `gpt-4-0613` and `gpt-3.5-turbo-0613`, and have the model intelligently choose to output a JSON object containing arguments to call those functions. This is a new way to more reliably connect GPT's capabilities with external tools and APIs.
+
+These models have been fine-tuned to both detect when a function needs to be called (depending on the user’s input) and to respond with JSON that adheres to the function signature. Function calling allows developers to more reliably get structured data back from the model. For example, developers can:
+
+- Create chatbots that answer questions by calling external tools (e.g., like ChatGPT Plugins)
+
+Convert queries such as “Email Anya to see if she wants to get coffee next Friday” to a function call like `send_email(to: string, body: string)`, or “What’s the weather like in Boston?” to `get_current_weather(location: string, unit: 'celsius' | 'fahrenheit')`.
+
+- Convert natural language into API calls or database queries
+
+Convert “Who are my top ten customers this month?” to an internal API call such as `get_customers_by_revenue(start_date: string, end_date: string, limit: int)`, or “How many orders did Acme, Inc. place last month?” to a SQL query using `sql_query(query: string)`.
+
+- Extract structured data from text
+
+Define a function called `extract_people_data(people: [{name: string, birthday: string, location: string}])`, to extract all people mentioned in a Wikipedia article.
+
+These use cases are enabled by new API parameters in our `/v1/chat/completions` endpoint, `functions` and `function_call`, that allow developers to describe functions to the model via JSON Schema, and optionally ask it to call a specific function. Get started with our [developer documentation](https://platform.openai.com/docs/guides/gpt/function-calling) and [add evals](https://github.com/openai/evals) if you find cases where function calling could be improved
 
 ## 新模型
 
