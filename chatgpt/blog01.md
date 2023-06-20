@@ -146,11 +146,9 @@ Since the alpha release of ChatGPT plugins, we have learned much about making to
 
 ### GPT-3.5 Turbo模型
 
-`gpt-3.5-turbo-0613` 
+`gpt-3.5-turbo-0613` 相对于`gpt-3.5-turbo`，新增了函数调用的支持。
 
-includes the same function calling as GPT-4 as well as more reliable steerability via the system message, two features that allow developers to guide the model's responses more effectively.
-
-`gpt-3.5-turbo-16k` offers 4 times the context length of `gpt-3.5-turbo` at twice the price: $0.003 per 1K input tokens and $0.004 per 1K output tokens. 16k context means the model can now support ~20 pages of text in a single request.
+`gpt-3.5-turbo-16k` 支持的上下文长度扩容到了16K，是`gpt-3.5-turbo`的4倍，费用是`gpt-3.5-turbo`的2倍。具体费用是每1K input token需要0.003美金， 每1K output token需要0.004美金。
 
 ### 旧模型下线时间
 
