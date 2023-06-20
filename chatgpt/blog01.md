@@ -4,12 +4,12 @@
 
 OpenAI官方在2023.06.13发布了API层面的重磅升级，主要变化如下：
 
-* 在Chat Completions这个API里支持了函数调用。
+* 在Chat Completions这个API里支持了开发者自定义的函数调用。
 * 更新了`gpt-4`和`gpt-3.5-turbo`模型。
-* `gpt-3.5-turbo`支持16k token数量的上下文长度，之前只支持4096个token。
+* `gpt-3.5-turbo`支持的上下文长度扩容到16K，之前只支持4K个token。
 * embedding model的使用成本降低75%。
-* `gpt-3.5-turbo`模型的输入token的成本降低25%，从原来的0.002美金 / 1000 token，下降为0.0015美金 / 1000 token。
-* 2023.09.13会下线`gpt-3.5-turbo-0301`、`gpt-4-0314`和`gpt-4-32k-0314` 模型，如果过了这个时间点，调用这些模型会失败。
+* `gpt-3.5-turbo`模型的input token的成本降低25%，从原来的0.002美金 / 1K token降低为0.0015美金 / 1K token。
+* 2023.09.13会下线`gpt-3.5-turbo-0301`、`gpt-4-0314`和`gpt-4-32k-0314` 模型，过了这个时间点调用这些模型会请求失败。
 
 上面提到的这些模型都严格遵循2023.03.01发布的隐私和安全规定，用户通过API发送的数据和API返回的数据不会用于OpenAI大模型的训练。
 
@@ -33,15 +33,13 @@ Define a function called `extract_people_data(people: [{name: string, birthday: 
 
 These use cases are enabled by new API parameters in our `/v1/chat/completions` endpoint, `functions` and `function_call`, that allow developers to describe functions to the model via JSON Schema, and optionally ask it to call a specific function. Get started with our [developer documentation](https://platform.openai.com/docs/guides/gpt/function-calling) and [add evals](https://github.com/openai/evals) if you find cases where function calling could be improved
 
-# Function calling example
+# Function calling例子
 
 What’s the weather like in Boston right now?
 
 Step 1·OpenAI API
 
 Call the model with functions and the user’s input
-
-
 
 - [Request](https://openai.com/blog/function-calling-and-other-api-updates#)
 - [Response](https://openai.com/blog/function-calling-and-other-api-updates#)
@@ -136,44 +134,50 @@ The weather in Boston is currently sunny with a temperature of 22 degrees Celsiu
 
 Since the alpha release of ChatGPT plugins, we have learned much about making tools and language models work together safely. However, there are still open research questions. For example, a proof-of-concept exploit illustrates how untrusted data from a tool’s output can instruct the model to perform unintended actions. We are working to mitigate these and other risks. Developers can protect their applications by only consuming information from trusted tools and by including user confirmation steps before performing actions with real-world impact, such as sending an email, posting online, or making a purchase.
 
-## New models
+## 新模型
 
-### GPT-4
+### GPT-4模型
 
-`gpt-4-0613` includes an updated and improved model with function calling.
+`gpt-4-0613` 相对于`gpt-4`，新增了函数调用的支持。
 
-`gpt-4-32k-0613` includes the same improvements as `gpt-4-0613`, along with an extended context length for better comprehension of larger texts.
+`gpt-4-32k-0613` 相对于`gpt-4-32k`，同样是新增了函数调用的支持。
 
-With these updates, we’ll be inviting many more people from [the waitlist](https://openai.com/waitlist/gpt-4-api) to try GPT-4 over the coming weeks, with the intent to remove the waitlist entirely with this model. Thank you to everyone who has been patiently waiting, we are excited to see what you build with GPT-4!
+在接下来的几周里，OpenAI会把GPT-4 API waiting list上的申请都尽量审批通过，让开发者可以享用到GPT-4的强大能力。还没申请的赶紧去申请吧。
 
-### GPT-3.5 Turbo
+### GPT-3.5 Turbo模型
 
-`gpt-3.5-turbo-0613` includes the same function calling as GPT-4 as well as more reliable steerability via the system message, two features that allow developers to guide the model's responses more effectively.
+`gpt-3.5-turbo-0613` 
+
+includes the same function calling as GPT-4 as well as more reliable steerability via the system message, two features that allow developers to guide the model's responses more effectively.
 
 `gpt-3.5-turbo-16k` offers 4 times the context length of `gpt-3.5-turbo` at twice the price: $0.003 per 1K input tokens and $0.004 per 1K output tokens. 16k context means the model can now support ~20 pages of text in a single request.
 
-### Model deprecations
+### 旧模型下线时间
 
-Today, we’ll begin the upgrade and deprecation process for the initial versions of `gpt-4` and `gpt-3.5-turbo` that we [announced in March](https://openai.com/blog/introducing-chatgpt-and-whisper-apis#:~:text=Chat guide.-,ChatGPT upgrades,-We are constantly). Applications using the stable model names (`gpt-3.5-turbo`, `gpt-4`, and `gpt-4-32k`) will automatically be upgraded to the new models listed above on June 27th. For comparing model performance between versions, our [Evals library](https://github.com/openai/evals) supports public and private evals to show how model changes will impact your use cases. 
+从2023.06.13开始，OpenAI会开始升级生产环境的`gpt-4`、`gpt-4-32k`和`gpt-3.5-turbo`模型到最新版本，预计2023.06.27开始就可以使用到升级后的模型了。
 
+如果开发者不想升级，可以继续使用旧版本的模型，不过需要在model参数里指定用
+ `gpt-3.5-turbo-0301`，`gpt-4-0314` 或 `gpt-4-32k-0314` 。
 
-Developers who need more time to transition can continue using the older models by specifying `gpt-3.5-turbo-0301`, `gpt-4-0314`, or `gpt-4-32k-0314` in the ‘model’ parameter of their API request. These older models will be accessible through September 13th, after which requests specifying those model names will fail. You can stay up to date on model deprecations via our [model deprecation page](https://platform.openai.com/docs/deprecations/). This is the first update to these models; so, we eagerly welcome [developer feedback](https://community.openai.com/) to help us ensure a smooth transition.
+这些旧版本的模型在2023.09.13会下线，后续继续调用会请求失败。
 
-## Lower pricing
+## 更低价格
 
-We continue to make our systems more efficient and are passing those savings on to developers, effective today.
+### Embedding模型
 
-### Embeddings
+`text-embedding-ada-002`目前是OpenAI所有embedding模型里最受欢迎的。
 
-`text-embedding-ada-002` is our most popular embeddings model. Today we’re reducing the cost by 75% to $0.0001 per 1K tokens.
+现在使用这个embedding模型的成本降低为0.0001美金/1K token，成本下降75%。
 
-### GPT-3.5 Turbo
+### GPT-3.5 Turbo模型
 
-`gpt-3.5-turbo` is our most popular chat model and powers ChatGPT for millions of users. Today we're reducing the cost of `gpt-3.5-turbo`’s input tokens by 25%. Developers can now use this model for just $0.0015 per 1K input tokens and $0.002 per 1K output tokens, which equates to roughly 700 pages per dollar.
+`gpt-3.5-turbo` 模型在收费的时候，既对用户发送的问题(input token)收费，也对API返回的结果(output token)收费。
 
-`gpt-3.5-turbo-16k` will be priced at $0.003 per 1K input tokens and $0.004 per 1K output tokens.
+现在该模型的input token成本降低25%，每1K input token的费用为0.0015美金。
 
-Developer feedback is a cornerstone of our platform’s evolution and we will continue to make improvements based on the suggestions we hear. We’re excited to see how developers use these latest models and new features in their applications.
+output token的费用保持不变，还是0.002美金/1K token。
+
+`gpt-3.5-turbo-16k` 模型的input token收费是0.003美金/1K token，output token收费是0.004美金/1K token。
 
 
 
