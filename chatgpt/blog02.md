@@ -8,17 +8,17 @@
 
 有了GPT-4的API，意味着开发者可以做出功能更强大、体验更好的应用。
 
-此外，OpenAI官方表示要废弃Completions API，该API目前可以使用的一些Model也要在2024年1月4号下线。后续OpenAI的规划是让开发者都使用Chat Completions API。
+此外，OpenAI官方表示要废弃Completions API，该API目前可以使用的一些Model会在2024年1月4号下线。后续OpenAI的规划是让开发者都使用Chat Completions API。
 
 另外，Embedding的部分模型以及Edits API也会在2024年1月4号下线。
 
 ## GPT-4 API全面开放
 
-GPT-4是目前最强大的大语言模型，从3月份开放API以来，已经有数百万的开发者进行了申请，有非常多成功的[应用](https://openai.com/customer-stories)是基于GPT-4 API开发的。
+GPT-4是目前最强大的大语言模型，从3月份开放API以来，数百万的开发者进行了申请，有非常多成功的[应用](https://openai.com/customer-stories)是基于GPT-4 API开发的。
 
 从2023.07.06开始，只要有过API付费记录的开发者都可以使用GPT-4 8K上下文版本的API了。
 
-新申请的开发者预计2023年7月底会审批通过，然后会基于已有的计算能力提升API的使用流控(rate limit)，让开发者可以更顺畅地使用GPT-4 API。
+新申请的开发者预计2023年7月底会审批通过，然后OpenAI会基于已有的计算能力来降低API的使用流控限制(rate limit)，让开发者可以更顺畅地使用GPT-4 API。
 
 GPT-3.5 Turbo, DALL.E和Whisper API也都会全部开放出来给开发者使用。
 
@@ -30,11 +30,9 @@ OpenAI在2023年3月份引入了[Chat Completions API](https://platform.openai.c
 
 Completions API是在2020年6月份引入的，当时是为了给开发者提供和OpenAI语言模型交互的能力。
 
-现在有了Chat Completions API后，其实可以覆盖Completions API的功能，而且Chat Completions API更为强大，可以满足非常多的使用场景和对话需求。
+现在有了Chat Completions API后，完全可以覆盖Completions API的功能，而且Chat Completions API更为强大，可以满足非常多的使用场景和对话需求。
 
 下面简单介绍几种Chat Completions API的使用场景：
-
-
 
 * 文本总结(Text summarization)
 
@@ -132,15 +130,17 @@ OpenAI接下来会把重点放在Chat Completions API，不再投入精力支持
 | text-davinci-002      |                        |
 | text-davinci-003      |                        |
 
-同时，OpenAI也把Completions API在官网的API文档里标记为`legacy`，不推荐大家继续使用了。
-
-所以还在用Completions API的赶紧去拥抱Chat Completions API吧。
-
 * 如果开发者使用的是基于GPT-3模型的稳定模型版本，例如`ada`, `babbage`, `curie`, `davinci`，那代码可以不用修改，这些稳定版本的模型底层会在2024年1月4日后自动升级为上面表格里右侧的新模型。
 
   右侧的新模型在接下来几周开放测试，调用API的时候指定新Model的名字即可，例如 	`ada-002`, `babbage-002`, `curie-002`, `davinci-002`。
 
 * 如果开发者使用的是其他旧模型名称，例如 `text-davinci-003`，那就需要在手工修改API里调用的模型名称为`gpt-3.5-turbo-instruct`，这个新模型也会在接下来几周开放测试。
+
+同时，OpenAI也把Completions API在官网的API文档里标记为`legacy`，不推荐大家继续使用了。
+
+所以还在用Completions API的赶紧去拥抱Chat Completions API吧。
+
+
 
 ## 废弃Embedding旧模型
 
