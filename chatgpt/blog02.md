@@ -212,9 +212,13 @@ print(fib(10))
 
 ## 相关阅读
 
-* 
-
-
+* [手把手教会你如何通过ChatGPT API实现上下文对话](https://mp.weixin.qq.com/s?__biz=Mzg2MTcwNjc1Mg==&mid=2247484749&idx=1&sn=ed175291674fb402fc50c588b82d25ee&chksm=ce124a22f965c334a43272ad05ea4981c055bb2d66a23fffab64fd449eea2dc6eeebc9679780#rd)
+* [ChatGPT API重大升级-必知必会](https://mp.weixin.qq.com/s?__biz=Mzg2MTcwNjc1Mg==&mid=2247484810&idx=1&sn=9583a27435c000865544991e0c4801c7&chksm=ce124ae5f965c3f322a847fcc5e89afe819f617d4ea77f1d54434d89cbf43f47e20139674dd1#rd)
+* [ChatGPT必会知识点](https://mp.weixin.qq.com/s?__biz=Mzg2MTcwNjc1Mg==&mid=2247484790&idx=1&sn=643b8cb0d003e8fc0914c9f713b187de&chksm=ce124a19f965c30f5f04f0c1a6f4aeac549e28184361c5dc77a00d4b149177fa8d8765c3e691#rd)
+* [baichuan-7B: 开源可商用支持中英文的最好大模型](https://mp.weixin.qq.com/s?__biz=Mzg2MTcwNjc1Mg==&mid=2247484799&idx=1&sn=b485d2cdff0e536436b19697c9d759bb&chksm=ce124a10f965c3061afd5d2919bc34665ee89b0d8abbabb88b434fc3a33282ca260f0d11ed86#rd)
+* [轩辕：首个千亿级中文金融对话模型](https://mp.weixin.qq.com/s?__biz=Mzg2MTcwNjc1Mg==&mid=2247484779&idx=1&sn=d983839154a79a9f0d21e327b5e9a557&chksm=ce124a04f965c3128b3a000182fe4e30c805540dd7bd8340602d749069744556658752c17f5a#rd)
+* [逼近GPT-4！BLOOMChat: 开源可商用支持多语言的大语言模型](https://mp.weixin.qq.com/s?__biz=Mzg2MTcwNjc1Mg==&mid=2247484766&idx=1&sn=ccecd302b889a73b46c8d804f713bc25&chksm=ce124a31f965c32749d27391ecbfd185ae48f9a1e30aeed5d5fc2b0de97b3f06e9116d85e61b#rd)
+* [一文汇总开源大语言模型，人人都可以拥有自己的ChatGPT](https://mp.weixin.qq.com/s?__biz=Mzg2MTcwNjc1Mg==&mid=2247484753&idx=1&sn=39448f762b4a0bc108272de5e3036619&chksm=ce124a3ef965c328ba7e160b85bb8b8fbfaefd90e007738e97b5beec75003982b88859478438#rd)
 
 
 
