@@ -6,6 +6,7 @@
 * [Lecture 4: ChatGPT API帮助手册](./lecture04.md)
 * [FAQ: 常见问题](./chatgpt_faq.md)
 * [ChatGPT API重大升级](./chatgpt/blog01.md)
+* [GPT-4 API全面开放使用](./chatgpt/blog02.md)
 
 
 
