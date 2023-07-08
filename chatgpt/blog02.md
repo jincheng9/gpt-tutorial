@@ -113,9 +113,9 @@ We plan to continue investing most of our platform efforts in this direction, as
 
 ## 废弃Completions API的旧模型
 
-As part of our increased investment in the Chat Completions API and our efforts to optimize our compute capacity, in 6 months we will be retiring some of our older models using the Completions API. While this API will remain accessible, we will label it as “legacy” in our developer documentation starting today. We plan for future model and product improvements to focus on the Chat Completions API, and do not have plans to publicly release new models using the Completions API.
+OpenAI接下来会把重点放在Chat Completions API，不再投入精力支持Completions API。
 
-Starting January 4, 2024, [older completion models](https://platform.openai.com/docs/deprecations) will no longer be available, and will be replaced with the following models:
+从2023年1月4日开始，Completions API目前可以使用的一些模型会下线，开发者要继续使用Completions API，得使用新模型，参考如下表格：
 
 | **Older model**       | **New model**          |
 | --------------------- | ---------------------- |
@@ -132,19 +132,25 @@ Starting January 4, 2024, [older completion models](https://platform.openai.com/
 | text-davinci-002      |                        |
 | text-davinci-003      |                        |
 
-Applications using the stable model names for base GPT-3 models (`ada`, `babbage`, `curie`, `davinci`) will automatically be upgraded to the new models listed above on January 4, 2024. The new models will also be accessible in the coming weeks for early testing by specifying the following model names in API calls: `ada-002`, `babbage-002`, `curie-002`, `davinci-002`.
+同时，OpenAI也把Completions API在官网的API文档里标记为`legacy`，不推荐大家继续使用了。
 
-Developers using other older completion models (such as `text-davinci-003`) will need to manually upgrade their integration by January 4, 2024 by specifying `gpt-3.5-turbo-instruct` in the “model” parameter of their API requests. `gpt-3.5-turbo-instruct` is an InstructGPT-style model, trained similarly to `text-davinci-003`. This new model is a drop-in replacement in the Completions API and will be available in the coming weeks for early testing.
+所以还在用Completions API的赶紧去拥抱Chat Completions API吧。
 
-Developers wishing to continue using their fine-tuned models beyond January 4, 2024 will need to fine-tune replacements atop the new base GPT-3 models (`ada-002`, `babbage-002`, `curie-002`, `davinci-002`), or newer models (`gpt-3.5-turbo`, `gpt-4`). Once this feature is available later this year, we will give priority access to GPT-3.5 Turbo and GPT-4 fine-tuning to users who previously fine-tuned older models. We acknowledge that migrating off of models that are fine-tuned on your own data is challenging. We will be providing support to users who previously fine-tuned models to make this transition as smooth as possible.
+* 如果开发者使用的是基于GPT-3模型的稳定模型版本，例如`ada`, `babbage`, `curie`, `davinci`，那代码可以不用修改，这些稳定版本的模型底层会在2024年1月4日后自动升级为上面表格里右侧的新模型。
 
-In the coming weeks, we will reach out to developers who have recently used these older models, and will provide more information once the new completion models are ready for early testing.
+  右侧的新模型在接下来几周开放测试，调用API的时候指定新Model的名字即可，例如 	`ada-002`, `babbage-002`, `curie-002`, `davinci-002`。
+
+* 如果开发者使用的是其他旧模型名称，例如 `text-davinci-003`，那就需要在手工修改API里调用的模型名称为`gpt-3.5-turbo-instruct`，这个新模型也会在接下来几周开放测试。
 
 ## 废弃Embedding旧模型
 
-Users of older embeddings models (e.g., `text-search-davinci-doc-001`) will need to migrate to `text-embedding-ada-002` by January 4, 2024. We released `text-embedding-ada-002` in December 2022, and have found it more capable and cost effective than previous models. Today `text-embedding-ada-002` accounts for 99.9% of all embedding API usage.
+从2024年1月4日开始，只能使用text-embedding-ada-002这个Embedding Model，其它Embedding Model都会下线，不能再使用。
 
-We recognize this is a significant change for developers using those older models. Winding down these models is not a decision we are making lightly. We will cover the financial cost of users re-embedding content with these new models. We will be in touch with impacted users over the coming days.
+text-embedding-ada-002是2022年12月上线的，比其它Embedding Model更强大而且成本更低。现在99%的embedding API调用都在使用这个模型。
+
+这对使用旧模型来做embedding的开发者来说是一个痛苦的事情，因为不同模型embedding的结果是不一样的，开发者需要在旧模型下线前提前做好适配和测试。
+
+OpenAI官方承诺会补偿旧模型的用户。
 
 | **Older model**               | **New model**          |
 | ----------------------------- | ---------------------- |
@@ -167,13 +173,13 @@ We recognize this is a significant change for developers using those older model
 
 ## 废弃Edits API
 
-通过Edits API
+目前Edits API可以使用`text-davinci-edit-001` 和`code-davinci-edit-001`这2个模型。
 
-Users of the Edits API and its associated models (e.g., `text-davinci-edit-001` or `code-davinci-edit-001`) will need to migrate to GPT-3.5 Turbo by January 4, 2024. 
+从2024年1月4日开始，Edits API不能使用这2个模型，要继续使用Edits API，得使用GPT-3.5 Turbo模型。
 
-The Edits API beta was an early exploratory API, meant to enable developers to return an edited version of the prompt based on instructions. 
+但是官方不再建议大家使用Edits API了，这个API也会废弃。
 
-We took the feedback from the Edits API into account when developing `gpt-3.5-turbo` and the Chat Completions API, which can now be used for the same purpose:
+我们建议直接使用Chat Completions API来替代Edits API，如下例所示：
 
 ```bash
 System
