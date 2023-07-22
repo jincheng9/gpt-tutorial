@@ -54,3 +54,9 @@
 ## AI知识
 
 * [Nvidia GPU显卡有哪些型号](./gpu/gpu0-nvidia.md)
+
+
+
+## References
+
+* https://medium.com/geekculture/list-of-open-sourced-fine-tuned-large-language-models-llm-8d95a2e0dc76
