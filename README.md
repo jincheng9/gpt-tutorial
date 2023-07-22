@@ -60,3 +60,4 @@
 ## References
 
 * https://medium.com/geekculture/list-of-open-sourced-fine-tuned-large-language-models-llm-8d95a2e0dc76
+* https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard
