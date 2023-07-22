@@ -20,10 +20,11 @@
 
 | Model            | 作者                                        | 参数量                                          | 训练数据量(tokens)                                           | 训练成本                                                     | 对中英文的支持 |
 | :--------------- | ------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | -------------- |
-| LLaMA            | Meta                                        | 包括 70 亿、130 亿、330 亿、650 亿 4 种参数规模 | 1.4万亿                                                      | 2048个A100 GPU                                               | 中英文         |
+| Llama-1          | Meta                                        | 包括 70 亿、130 亿、330 亿、650 亿 4 种参数规模 | 1.4万亿                                                      | 2048个A100 GPU                                               | 中英文         |
 | Alpaca           | Stanford                                    | 70亿                                            | 52k条问答指令数据，指令数据来源于OpenAI的API返回结果         | 500美元数据成本+100美元训练成本                              | 中英文         |
 | Vicuna           | UC Berkeley, CMU, Stanford, UCSD and MBZUAI | 130亿                                           | 70k条问答指令数据，指令数据来源于用户分享出来的对话记录      | 300美元                                                      | 中英文         |
 | Koala            | UC Berkeley                                 | 130亿                                           | 500k条问答直录功能数据，指令数据来源于网上公开数据集         | 在公共云计算平台上，预期训练成本不超过100美元。一台 Nvidia DGX 服务器与8个A100 GPU，需要6个小时训练完成2个epochs。 | 中英文         |
+| Llama-2          | Meta                                        | 70亿、130亿和700亿参数规模                      | 2万亿                                                        | A100集群                                                     | 中英文         |
 | Bloom            | BigScience                                  | 1760亿                                          | 3660亿                                                       | 384 80GB A100 GPUs 训练3.5个月[数据来源](https://huggingface.co/blog/bloom-megatron-deepspeed) |                |
 | Bloomz           |                                             | 1760亿                                          |                                                              |                                                              |                |
 | BLOOMChat        | SambaNova and Together                      | 1760亿                                          | [OIG](https://huggingface.co/datasets/laion/OIG) from [OpenChatKit](https://www.together.xyz/blog/openchatkit) , [Dolly 2.0](https://www.databricks.com/blog/2023/04/12/dolly-first-open-commercially-viable-instruction-tuned-llm), and [OASST1](https://huggingface.co/datasets/OpenAssistant/oasst1) datasets | 基于Bloom在指定数据集上做fine tune                           | 中英文         |
@@ -36,10 +37,12 @@
 | baichuan-7B      | Baichuan-Inc                                | 70亿参数                                        | 1.2万亿                                                      | 千卡A800集群，成本未知                                       | 中英文         |
 | baichuan-13B     | Baichuan-Inc                                | 130亿参数                                       | 1.4万亿                                                      | 千卡A800集群，成本未知                                       | 中英文         |
 
-* Alpaca, Vicuna, Koala都是基于LLaMA衍生而来的，LLaMA目前仅用于学术、社会公益项目，不能用于商业化项目。
+* Alpaca, Vicuna, Koala都是基于Llama-1衍生而来的，Llama-1目前仅用于学术、社会公益项目，不能用于商业化项目。
+* Llama-2不仅可以用于学术研究，还可以用于商业化。
 * Dolly 2.0是基于15k指令数据做fine-tune，其依赖的base model是 [EleutherAI’s](https://www.eleuther.ai/) [Pythia-12b](https://huggingface.co/EleutherAI/pythia-12b)。
 * MPT-7B可商用。
 * baichuan-7B和baichuan-13B可商用，支持中英文。
+* ChatGLM和ChatGLM2可以商用。
 
 
 
