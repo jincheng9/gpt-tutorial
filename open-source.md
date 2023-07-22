@@ -6,6 +6,14 @@ RLHF: Reinforcement Learning from Human Feedback
 
 LLM: Large Language Model
 
+INT4/8量化
+
+Embedding
+
+knowledge database expert
+
+fine-tuned digital person
+
 
 
 ## 开源链接
