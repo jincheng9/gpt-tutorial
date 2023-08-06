@@ -2,17 +2,17 @@
 
 ## 背景
 
-This guide shares strategies and tactics for getting better results from GPTs. The methods described here can sometimes be deployed in combination for greater effect. We encourage experimentation to find the methods that work best for you.
+OpenAI官方详细介绍了ChatGPT使用的最佳实践，不仅适用于使用ChatGPT网站的用户，还适用于通过OpenAI API接入的开发者。
 
-Some of the examples demonstrated here currently work only with our most capable model, `gpt-4`. If you don't yet have access to `gpt-4` consider joining the [waitlist](https://openai.com/waitlist/gpt-4-api). In general, if you find that a GPT model fails at a task and a more capable model is available, it's often worth trying again with the more capable model.
+掌握了这些最佳实践，就能更好地利用GPT大模型。
+
+本文是ChatGPT使用最佳实践系列第1篇。
+
+## 策略: 清晰且明确的指令
 
 
-
-## Strategy: Write clear instructions
 
 GPTs can’t read your mind. If outputs are too long, ask for brief replies. If outputs are too simple, ask for expert-level writing. If you dislike the format, demonstrate the format you’d like to see. The less GPTs have to guess at what you want, the more likely you’ll get it.
-
-
 
 ### Tactic: Include details in your query to get more relevant answers
 
