@@ -1,4 +1,10 @@
-# GPT常见概念
+# ChatGPT常见概念
+
+## GPT
+
+GPT: Generative Pre-trained Transformer
+
+生成式预训练Transfomer，是OpenAI大模型的技术核心。
 
 ## Prompt和Completion
 
