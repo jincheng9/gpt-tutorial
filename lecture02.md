@@ -56,13 +56,18 @@ Whisper可以根据录音生成文本。
 其它语言的library官方没有开发，由社区提供。
 
 * [Python API](https://github.com/openai/openai-python)
-
 * [NodeJS API](https://github.com/openai/openai-node)
-
 * [其它语言的API](https://platform.openai.com/docs/libraries)
-
 * [配置或者查看API Keys](https://platform.openai.com/account/api-keys)
 * [查看Organization ID](https://platform.openai.com/account/org-settings)
+
+### temperature参数
+
+Chat接口和Completion接口的一个参数，用来控制模型输出结果的变化概率。
+
+这个值越小表示输出结果越确定，越不会发生改变。
+
+> What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic.
 
 ## Embedding
 
