@@ -1,5 +1,15 @@
 # ChatGPT常见概念
 
+### ChatGPT
+
+免费版的ChatGPT基于GPT-3.5Model实现，升级为Plus会员可以使用最新的GPT-4。
+
+* [在线对话入口](https://chat.openai.com/chat)
+
+### DALL-E
+
+* [画图入口](https://labs.openai.com/)
+
 ## GPT
 
 GPT: Generative Pre-trained Transformer
@@ -32,16 +42,6 @@ Whisper可以根据录音生成文本。
 * ChatGPT不能联网获取最新知识，但是ChatGPT推出了[ChatGPT plugin](https://openai.com/blog/chatgpt-plugins)，可以通过插件的方式获取最新知识。
 
   ![](./lecture02_1.png)
-
-### ChatGPT
-
-免费版的ChatGPT基于GPT-3.5Model实现，升级为Plus会员可以使用最新的GPT-4。
-
-* [在线对话入口](https://chat.openai.com/chat)
-
-### DALL-E
-
-* [画图入口](https://labs.openai.com/)
 
 ## Token
 
