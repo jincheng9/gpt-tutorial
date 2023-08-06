@@ -6,24 +6,13 @@ This guide shares strategies and tactics for getting better results from GPTs. T
 
 Some of the examples demonstrated here currently work only with our most capable model, `gpt-4`. If you don't yet have access to `gpt-4` consider joining the [waitlist](https://openai.com/waitlist/gpt-4-api). In general, if you find that a GPT model fails at a task and a more capable model is available, it's often worth trying again with the more capable model.
 
-[Six strategies for getting better results](https://platform.openai.com/docs/guides/gpt-best-practices/six-strategies-for-getting-better-results)
-
-[Write clear instructions](https://platform.openai.com/docs/guides/gpt-best-practices/write-clear-instructions)
-
-GPTs can’t read your mind. If outputs are too long, ask for brief replies. If outputs are too simple, ask for expert-level writing. If you dislike the format, demonstrate the format you’d like to see. The less GPTs have to guess at what you want, the more likely you’ll get it.
-
-Tactics:
-
-- [Include details in your query to get more relevant answers](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-include-details-in-your-query-to-get-more-relevant-answers)
-- [Ask the model to adopt a persona](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-ask-the-model-to-adopt-a-persona)
-- [Use delimiters to clearly indicate distinct parts of the input](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-use-delimiters-to-clearly-indicate-distinct-parts-of-the-input)
-- [Specify the steps required to complete a task](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-specify-the-steps-required-to-complete-a-task)
-- [Provide examples](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-provide-examples)
-- [Specify the desired length of the output](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-specify-the-desired-length-of-the-output)
-
 
 
 ## Strategy: Write clear instructions
+
+GPTs can’t read your mind. If outputs are too long, ask for brief replies. If outputs are too simple, ask for expert-level writing. If you dislike the format, demonstrate the format you’d like to see. The less GPTs have to guess at what you want, the more likely you’ll get it.
+
+
 
 ### Tactic: Include details in your query to get more relevant answers
 
