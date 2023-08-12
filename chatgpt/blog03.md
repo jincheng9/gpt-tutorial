@@ -12,17 +12,17 @@ GPT大模型并不会读心术，需要你在提示词(prompt)里明确你的具
 
 * 如果大模型给的回答过长，你可以在prompt里告诉它你想要更简短的回答。
 * 如果大模型给的回答过于简单，你可以在prompt里要求它提供专家水准一般的输出。
-* 如果大模型给的回答格式你不喜欢，你可以在prompt里展示你想要的输出格式。
+* 如果大模型给的回答格式你不喜欢，你可以在prompt里告诉大模型你想要的输出格式。
 
-简而言之，GPT需要猜的东西越少，回答的效果也会越好。
+简而言之，GPT需要猜的东西越少，回答的效果越好。
 
-接下来详细讲述下6个具体的操作指引。
+接下来详细讲述6个具体的操作指引。
 
 ## 策略1：在prompt里提供细节
 
 如果要让GPT给出你想要的结果，需要确保你的prompt里包含重要的细节，否则GPT模型需要猜测你想要的答案，那给出的结果就未必好了。
 
-以下是一些具体示例，第一列为bad prompt，第二列为good prompt。
+以下是一些具体示例，第一列为bad prompt，第二列为good prompt，大家可以对比感受下。
 
 | **Worse**                                       | **Better**                                                   |
 | :---------------------------------------------- | :----------------------------------------------------------- |
@@ -33,7 +33,7 @@ GPT大模型并不会读心术，需要你在提示词(prompt)里明确你的具
 
 ## 策略2：指定模型需要扮演的角色
 
-OpenAI的Chat Completions API里的messages参数可以通过指定role为system来告诉模型需要扮演的角色。
+OpenAI的Chat Completions API的messages参数可以通过指定role为system来告诉模型需要扮演的角色。
 
 ```bash
 curl https://api.openai.com/v1/chat/completions \
@@ -54,9 +54,9 @@ curl https://api.openai.com/v1/chat/completions \
   }'
 ```
 
-例如，你希望GPT帮你做内容创作，然后在每段内容里包含至少一个笑话或俏皮的评论。
+例如，你希望GPT帮你做内容创作，创作的每段内容里包含至少一个笑话或俏皮的评论。
 
-那system可以这么如下示例：
+那system可以按如下示例设计：
 
 | SYSTEM | When I ask for help to write something, you will reply with a document that contains at least one joke or playful comment in every paragraph. |
 | ------ | ------------------------------------------------------------ |
@@ -66,7 +66,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 
 
-## 策略3：用分隔符来明确prompt的不同组成部分
+## 策略3：用分隔符来明确prompt的结构
 
 分隔符可以方便大模型更精确识别prompt里的不同组成部分，回答效果更好。
 
@@ -121,7 +121,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 可以在这个链接里看效果：[Open in Playground](https://platform.openai.com/playground/p/default-chat-few-shot)
 
-## 策略6：明确你想要的输出结果的长度
+## 策略6：明确回答的长度
 
 你可以告诉模型回答内容的长度，这个长度可以是字数，可以是句子数量，也可以是段落数量等。对于字数，模型不会特别精准。
 
