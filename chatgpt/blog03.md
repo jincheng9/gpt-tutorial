@@ -79,7 +79,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 | SYSTEM | You will be provided with a pair of articles (delimited with XML tags) about the same topic. First summarize the arguments of each article. Then indicate which of them makes a better argument and explain why. |
 | ------ | ------------------------------------------------------------ |
-| USER   | <article> insert first article here </article> <br><article> insert second article here </article> |
+| USER   | \<article> insert first article here  \</article> <br>\<article> insert second article here \</article> |
 
 
 
@@ -127,17 +127,17 @@ curl https://api.openai.com/v1/chat/completions \
 
 参考示例如下：
 
-| USER | Summarize the text delimited by triple quotes in about 50 words. """insert text here""" |
+| USER | Summarize the text delimited by triple quotes in about 50 words.<br> """insert text here""" |
 | ---- | ------------------------------------------------------------ |
 
 
 
-| USER | Summarize the text delimited by triple quotes in 2 paragraphs. """insert text here""" |
+| USER | Summarize the text delimited by triple quotes in 2 paragraphs. <br>"""insert text here""" |
 | ---- | ------------------------------------------------------------ |
 
 
 
-| USER | Summarize the text delimited by triple quotes in 3 bullet points. """insert text here""" |
+| USER | Summarize the text delimited by triple quotes in 3 bullet points. <br>"""insert text here""" |
 | ---- | ------------------------------------------------------------ |
 
 
