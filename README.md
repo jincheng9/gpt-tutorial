@@ -7,7 +7,7 @@
 * [FAQ: 常见问题](./chatgpt_faq.md)
 * [ChatGPT API重大升级](./chatgpt/blog01.md)
 * [GPT-4 API全面开放使用](./chatgpt/blog02.md)
-* [ChatGPT使用最佳实践系列-第1篇](./chatgpt/blog03.md)
+* [ChatGPT最佳实践系列-第1篇](./chatgpt/blog03.md)
 
 
 

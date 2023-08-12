@@ -1,22 +1,28 @@
-# ChatGPT使用最佳实践系列-第1篇
+# ChatGPT最佳实践系列-第1篇
 
 ## 背景
 
-OpenAI官方详细介绍了ChatGPT使用的最佳实践，不仅适用于使用ChatGPT网站的用户，还适用于通过OpenAI API接入的开发者。
+OpenAI官方详细介绍了ChatGPT使用的最佳实践，不仅适用于使用ChatGPT网站进行直接对话的用户，还适用于通过OpenAI API接入的开发者。
 
 掌握了这些最佳实践，就能更好地利用GPT大模型。
 
-本文是ChatGPT使用最佳实践系列第1篇。
+本文是ChatGPT使用最佳实践系列第1篇 - 提供清晰且明确的指令(write clear instructions)。
 
-## 策略: 清晰且明确的指令
+GPT大模型并不会读心术，需要你在提示词(prompt)里明确你的具体诉求，大模型才会提供最佳的回答。
 
+* 如果大模型给的回答过长，你可以在prompt里告诉它你想要更简短的回答。
+* 如果大模型给的回答过于简单，你可以在prompt里要求它提供专家水准一般的输出。
+* 如果大模型给的回答格式你不喜欢，你可以在prompt里展示你想要的输出格式。
 
+简而言之，GPT需要猜的东西越少，回答的效果也会越好。
 
-GPTs can’t read your mind. If outputs are too long, ask for brief replies. If outputs are too simple, ask for expert-level writing. If you dislike the format, demonstrate the format you’d like to see. The less GPTs have to guess at what you want, the more likely you’ll get it.
+接下来详细讲述下6个具体的操作指引。
 
-### Tactic: Include details in your query to get more relevant answers
+## 策略1：在prompt里提供细节
 
-In order to get a highly relevant response, make sure that requests provide any important details or context. Otherwise you are leaving it up to the model to guess what you mean.
+如果要让GPT给出你想要的结果，需要确保你的prompt里包含重要的细节，否则GPT模型需要猜测你想要的答案，那给出的结果就未必好了。
+
+以下是一些具体示例，第一列为bad prompt，第二列为good prompt。
 
 |                                                 |                                                              |
 | :---------------------------------------------- | :----------------------------------------------------------- |
@@ -26,9 +32,32 @@ In order to get a highly relevant response, make sure that requests provide any 
 | Write code to calculate the Fibonacci sequence. | Write a TypeScript function to efficiently calculate the Fibonacci sequence. Comment the code liberally to explain what each piece does and why it's written that way. |
 | Summarize the meeting notes.                    | Summarize the meeting notes in a single paragraph. Then write a markdown list of the speakers and each of their key points. Finally, list the next steps or action items suggested by the speakers, if any. |
 
-### Tactic: Ask the model to adopt a persona
+## 策略2：指定模型需要扮演的角色
 
-The system message can be used to specify the persona used by the model in its replies.
+OpenAI的Chat Completions API里的messages参数可以通过指定role为system来告诉模型需要扮演的角色。
+
+```bash
+curl https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -d '{
+    "model": "gpt-3.5-turbo",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a math genius."
+      },
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ]
+  }'
+```
+
+
+
+
 
 SYSTEM
 
@@ -40,7 +69,9 @@ Write a thank you note to my steel bolt vendor for getting the delivery in on ti
 
 [Open in Playground](https://platform.openai.com/playground/p/default-playful-thank-you-note)
 
-### Tactic: Use delimiters to clearly indicate distinct parts of the input
+## 策略3：用分隔符来明确prompt的不同组成部分
+
+
 
 Delimiters like triple quotation marks, XML tags, section titles, etc. can help demarcate sections of text to be treated differently.
 
@@ -72,7 +103,7 @@ Abstract: insert abstract here Title: insert title here
 
 For straightforward tasks such as these, using delimiters might not make a difference in the output quality. However, the more complex a task is the more important it is to disambiguate task details. Don’t make GPTs work to understand exactly what you are asking of them.
 
-### Tactic: Specify the steps required to complete a task
+## 策略4：指定完成本项任务需要的步骤
 
 Some tasks are best specified as a sequence of steps. Writing the steps out explicitly can make it easier for the model to follow them.
 
@@ -86,7 +117,7 @@ USER
 
 [Open in Playground](https://platform.openai.com/playground/p/default-step-by-step-summarize-and-translate)
 
-### Tactic: Provide examples
+## 策略5：提供示例
 
 Providing general instructions that apply to all examples is generally more efficient than demonstrating all permutations of a task by example, but in some cases providing examples may be easier. For example, if you intend for the model to copy a particular style of responding to user queries which is difficult to describe explicitly. This is known as "few-shot" prompting.
 
@@ -108,7 +139,7 @@ Teach me about the ocean.
 
 [Open in Playground](https://platform.openai.com/playground/p/default-chat-few-shot)
 
-### Tactic: Specify the desired length of the output
+## 策略6：明确你想要的输出结果的长度
 
 You can ask the model to produce outputs that are of a given target length. The targeted output length can be specified in terms of the count of words, sentences, paragraphs, bullet points, etc. Note however that instructing the model to generate a specific number of words does not work with high precision. The model can more reliably generate outputs with a specific number of paragraphs or bullet points.
 
