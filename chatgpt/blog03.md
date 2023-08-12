@@ -24,9 +24,8 @@ GPT大模型并不会读心术，需要你在提示词(prompt)里明确你的具
 
 以下是一些具体示例，第一列为bad prompt，第二列为good prompt。
 
-|                                                 |                                                              |
-| :---------------------------------------------- | :----------------------------------------------------------- |
 | **Worse**                                       | **Better**                                                   |
+| :---------------------------------------------- | :----------------------------------------------------------- |
 | How do I add numbers in Excel?                  | How do I add up a row of dollar amounts in Excel? I want to do this automatically for a whole sheet of rows with all the totals ending up on the right in a column called "Total". |
 | Who’s president?                                | Who was the president of Mexico in 2021, and how frequently are elections held? |
 | Write code to calculate the Fibonacci sequence. | Write a TypeScript function to efficiently calculate the Fibonacci sequence. Comment the code liberally to explain what each piece does and why it's written that way. |
@@ -55,67 +54,56 @@ curl https://api.openai.com/v1/chat/completions \
   }'
 ```
 
+例如，你希望GPT帮你做内容创作，然后在每段内容里包含至少一个笑话或俏皮的评论。
+
+那system可以这么如下示例：
+
+| SYSTEM | When I ask for help to write something, you will reply with a document that contains at least one joke or playful comment in every paragraph. |
+| ------ | ------------------------------------------------------------ |
+| USER   | Write a thank you note to my steel bolt vendor for getting the delivery in on time and in short notice. This made it possible for us to deliver an important order. |
+
+可以在这个链接里看效果：[Open in Playground](https://platform.openai.com/playground/p/default-playful-thank-you-note)
 
 
-
-
-SYSTEM
-
-When I ask for help to write something, you will reply with a document that contains at least one joke or playful comment in every paragraph.
-
-USER
-
-Write a thank you note to my steel bolt vendor for getting the delivery in on time and in short notice. This made it possible for us to deliver an important order.
-
-[Open in Playground](https://platform.openai.com/playground/p/default-playful-thank-you-note)
 
 ## 策略3：用分隔符来明确prompt的不同组成部分
 
+分隔符可以方便大模型更精确识别prompt里的不同组成部分，回答效果更好。
+
+参考示例：
+
+| USER | Summarize the text delimited by triple quotes with a haiku. <br>"""insert text here""" |
+| ---- | ------------------------------------------------------------ |
 
 
-Delimiters like triple quotation marks, XML tags, section titles, etc. can help demarcate sections of text to be treated differently.
 
-USER
+| SYSTEM | You will be provided with a pair of articles (delimited with XML tags) about the same topic. First summarize the arguments of each article. Then indicate which of them makes a better argument and explain why. |
+| ------ | ------------------------------------------------------------ |
+| USER   | <article> insert first article here </article> <br><article> insert second article here </article> |
 
-Summarize the text delimited by triple quotes with a haiku. """insert text here"""
 
-[Open in Playground](https://platform.openai.com/playground/p/default-delimiters-1)
 
-SYSTEM
+| SYSTEM | You will be provided with a thesis abstract and a suggested title for it. The thesis title should give the reader a good idea of the topic of the thesis but should also be eye-catching. If the title does not meet these criteria, suggest 5 alternatives. |
+| ------ | ------------------------------------------------------------ |
+| USER   | Abstract: insert abstract here Title: insert title here      |
 
-You will be provided with a pair of articles (delimited with XML tags) about the same topic. First summarize the arguments of each article. Then indicate which of them makes a better argument and explain why.
 
-USER
 
-<article> insert first article here </article> <article> insert second article here </article>
+对于一些很简单的任务，加分隔符前后效果可能不明显。
 
-[Open in Playground](https://platform.openai.com/playground/p/default-delimiters-2)
-
-SYSTEM
-
-You will be provided with a thesis abstract and a suggested title for it. The thesis title should give the reader a good idea of the topic of the thesis but should also be eye-catching. If the title does not meet these criteria, suggest 5 alternatives.
-
-USER
-
-Abstract: insert abstract here Title: insert title here
-
-[Open in Playground](https://platform.openai.com/playground/p/default-delimiters-3)
-
-For straightforward tasks such as these, using delimiters might not make a difference in the output quality. However, the more complex a task is the more important it is to disambiguate task details. Don’t make GPTs work to understand exactly what you are asking of them.
+但是对于一些复杂的任务，比如很长的的prompt，加分隔符可以让GPT精确识别到每部分的结构，回答效果会更好。
 
 ## 策略4：指定完成本项任务需要的步骤
 
-Some tasks are best specified as a sequence of steps. Writing the steps out explicitly can make it easier for the model to follow them.
+有些任务是可以分步拆解的，明确告诉GPT要执行的每个步骤可以让回答效果更好。
 
-SYSTEM
+| SYSTEM | Use the following step-by-step instructions to respond to user inputs. <br><br/>Step 1 - The user will provide you with text in triple quotes. Summarize this text in one sentence with a prefix that says "Summary: ". <br><br/>Step 2 - Translate the summary from Step 1 into Spanish, with a prefix that says "Translation: ". |
+| ------ | ------------------------------------------------------------ |
+| USER   | """insert text here"""                                       |
 
-Use the following step-by-step instructions to respond to user inputs. Step 1 - The user will provide you with text in triple quotes. Summarize this text in one sentence with a prefix that says "Summary: ". Step 2 - Translate the summary from Step 1 into Spanish, with a prefix that says "Translation: ".
+比如上面的例子，GPT的回答就会根据你的要求，第一步先输出summary，第二步再把summary翻译为西班牙语。
 
-USER
-
-"""insert text here"""
-
-[Open in Playground](https://platform.openai.com/playground/p/default-step-by-step-summarize-and-translate)
+可以在这个链接里看效果：[Open in Playground](https://platform.openai.com/playground/p/default-step-by-step-summarize-and-translate)
 
 ## 策略5：提供示例
 
