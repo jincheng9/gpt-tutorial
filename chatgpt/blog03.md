@@ -107,49 +107,48 @@ curl https://api.openai.com/v1/chat/completions \
 
 ## 策略5：提供示例
 
-Providing general instructions that apply to all examples is generally more efficient than demonstrating all permutations of a task by example, but in some cases providing examples may be easier. For example, if you intend for the model to copy a particular style of responding to user queries which is difficult to describe explicitly. This is known as "few-shot" prompting.
+有时候你希望GPT按照你想要的风格回答问题，但是这个风格又很难用明确的语言表述出来，就可以通过提供样例的方式给GPT，这种就叫 few-shot learning/prompting。
 
-SYSTEM
+参考示例如下，你提供了一组<user, assistant>样例，system里指定了模型要扮演的角色。
 
-Answer in a consistent style.
+后续user的问题，模型就会按照你提供的样例的风格进行回答。
 
-USER
+| SYSTEM    | Answer in a consistent style.                                |
+| --------- | ------------------------------------------------------------ |
+| USER      | Teach me about patience.                                     |
+| ASSISTANT | The river that carves the deepest valley flows from a modest spring; the grandest symphony originates from a single note; the most intricate tapestry begins with a solitary thread. |
+| USER      | Teach me about the ocean.                                    |
 
-Teach me about patience.
-
-ASSISTANT
-
-The river that carves the deepest valley flows from a modest spring; the grandest symphony originates from a single note; the most intricate tapestry begins with a solitary thread.
-
-USER
-
-Teach me about the ocean.
-
-[Open in Playground](https://platform.openai.com/playground/p/default-chat-few-shot)
+可以在这个链接里看效果：[Open in Playground](https://platform.openai.com/playground/p/default-chat-few-shot)
 
 ## 策略6：明确你想要的输出结果的长度
 
-You can ask the model to produce outputs that are of a given target length. The targeted output length can be specified in terms of the count of words, sentences, paragraphs, bullet points, etc. Note however that instructing the model to generate a specific number of words does not work with high precision. The model can more reliably generate outputs with a specific number of paragraphs or bullet points.
+你可以告诉模型回答内容的长度，这个长度可以是字数，可以是句子数量，也可以是段落数量等。对于字数，模型不会特别精准。
 
-USER
+参考示例如下：
 
-Summarize the text delimited by triple quotes in about 50 words. """insert text here"""
+| USER | Summarize the text delimited by triple quotes in about 50 words. """insert text here""" |
+| ---- | ------------------------------------------------------------ |
 
-[Open in Playground](https://platform.openai.com/playground/p/default-summarize-text-50-words)
 
-USER
 
-Summarize the text delimited by triple quotes in 2 paragraphs. """insert text here"""
+| USER | Summarize the text delimited by triple quotes in 2 paragraphs. """insert text here""" |
+| ---- | ------------------------------------------------------------ |
 
-[Open in Playground](https://platform.openai.com/playground/p/default-summarize-text-2-paragraphs)
 
-USER
 
-Summarize the text delimited by triple quotes in 3 bullet points. """insert text here"""
+| USER | Summarize the text delimited by triple quotes in 3 bullet points. """insert text here""" |
+| ---- | ------------------------------------------------------------ |
 
-[Open in Playground](https://platform.openai.com/playground/p/default-summarize-text-3-bullet-points)
+
 
 ## 总结
+
+本文是ChatGPT使用最佳实践系列第1篇 - 提供清晰且明确的指令(write clear instructions)。
+
+详细讲述了6个策略，以上策略不仅适用于GPT模型，还适用于其它大语言模型。
+
+
 
 文章和示例代码开源在GitHub: [GPT实战教程](https://github.com/jincheng9/gpt-tutorial)，可以看到所有主流的开源LLM。
 
