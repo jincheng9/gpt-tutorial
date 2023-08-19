@@ -26,7 +26,7 @@ GPT可能会自信地编造虚假的答案，尤其是在被询问深奥的话�
 
 向量化(embedding)就可以用来实现高效的信息检索。
 
-可以参考["Use embeddings-based search to implement efficient knowledge retrieval"](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-use-embeddings-based-search-to-implement-efficient-knowledge-retrieval) 了解更多向量化检索细节。
+可以参考[Use embeddings-based search to implement efficient knowledge retrieval](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-use-embeddings-based-search-to-implement-efficient-knowledge-retrieval) 了解更多向量化检索细节。
 
 
 
