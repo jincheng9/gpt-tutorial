@@ -10,7 +10,7 @@ OpenAI官方详细介绍了ChatGPT使用的最佳实践，不仅适用于使用C
 
 GPT可能会自信地编造虚假的答案，尤其是在被询问深奥的话题或者要求提供引用内容或者URLs时。
 
-就像做笔记可以帮助学生在考试中得到更好的成绩一样，为GPT提供参考信息也可以帮助大模型生成更准确的回答，减少捏造的答案。
+就像做笔记可以帮助学生在考试中得到更好的成绩一样，为GPT提供参考信息也可以帮助大模型生成更准确的回答，减少捏造答案的可能性。
 
 ## 策略1：引导模型根据已知信息来回答问题
 
@@ -26,7 +26,7 @@ GPT可能会自信地编造虚假的答案，尤其是在被询问深奥的话�
 
 向量化(embedding)就可以用来实现高效的信息检索。
 
-可以参考["Use embeddings-based search to implement efficient knowledge retrieval"](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-use-embeddings-based-search-to-implement-efficient-knowledge-retrieval) 了解更多细节。
+可以参考["Use embeddings-based search to implement efficient knowledge retrieval"](https://platform.openai.com/docs/guides/gpt-best-practices/tactic-use-embeddings-based-search-to-implement-efficient-knowledge-retrieval) 了解更多向量化检索细节。
 
 
 
