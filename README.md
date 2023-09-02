@@ -9,6 +9,7 @@
 * [GPT-4 API全面开放使用](./chatgpt/blog02.md)
 * [ChatGPT最佳实践系列-第1篇](./chatgpt/blog03.md)
 * [ChatGPT最佳实践系列-第2篇](./chatgpt/blog04.md)
+* [ChatGPT最佳实践系列-第3篇](./chatgpt/blog05.md)
 
 
 
