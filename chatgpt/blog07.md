@@ -24,7 +24,7 @@ OpenAI官方详细介绍了ChatGPT使用的最佳实践，不仅适用于使用C
 
 向量检索是把输入的文本转化成一个vector向量，然后基于向量之间的相似度衡量就可以找到相似的文本数据。
 
-现在基于大模型做知识库助手，就是基于向量检索到方案来实现的。
+现在基于大模型做知识库助手，就是使用向量检索到方案来实现的。
 
 具体用例可以参考：[OpenAI Cookbook](https://github.com/openai/openai-cookbook/blob/main/examples/vector_databases/Using_vector_databases_for_embeddings_search.ipynb)。
 
