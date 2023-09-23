@@ -60,17 +60,17 @@ OpenAI官方详细介绍了ChatGPT使用的最佳实践，不仅适用于使用C
 
 ## 策略3：使用大模型的函数调用功能
 
-Chat completions这个API允许在请求里传入函数描述，大模型可以根据用户提问来判断是否要生成函数的实参，并且返回给用户，这个功能其实就是function call。
+Chat completions这个API允许在请求里传入函数定义，大模型可以根据用户提问来判断是否需要调用你传入的函数以及生成对应函数的实参，并且返回给用户，这个功能其实就是function call。
 
-function call非常实用，可以让我们对准确性要求比较高的场景问题生成尽可能精确的回答。
+function call非常实用，可以针对准确性要求比较高的场景生成尽可能精确的回答。
 
-比如，你希望问大模型今天深圳的气温是多少，大模型肯定是无法知晓的。
+比如，你问大模型今天深圳的气温是多少，GPT肯定是无法知晓的，因为它的训练数据只截止到2021年9月。
 
 针对这种场景，你可以写一个function，参数是日期和城市，输出结果是气温。
 
-你把这个function的定义传给作为参数传给GPT，GPT会根据用户的提问来判断是否需要调用到你提供的function。
+你把这个function的定义传给作为参数传给GPT，GPT会根据你的提问来判断是否需要调用到你提供的function。
 
-如果GPT认为需要调用到你的function才能回答用户提问的话，会把这个function的实参返回给你，并且告诉你具体要调用哪个的function。
+如果GPT认为需要调用到你的function才能回答提问的话，会把这个function的实参返回给你，并且告诉你具体要调用哪个的function。
 
 更多细节可以参考我之前写的文章：[GPT函数调用教程](https://mp.weixin.qq.com/s?__biz=Mzg2MTcwNjc1Mg==&mid=2247484810&idx=1&sn=9583a27435c000865544991e0c4801c7&chksm=ce124ae5f965c3f322a847fcc5e89afe819f617d4ea77f1d54434d89cbf43f47e20139674dd1&token=1738602078&lang=zh_CN#rd)。
 
