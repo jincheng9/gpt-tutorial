@@ -36,7 +36,7 @@ OpenAI官方详细介绍了ChatGPT使用的最佳实践，不仅适用于使用C
 
 比如下面的例子，你可以让通过system消息让大模型编写代码，把代码按照你预期的格式输出。然后你可以针对这个格式来解析大模型的输出代码，最后在你的运行环境执行代码，拿到计算结果。
 
-| System    | You can write and execute Python code by enclosing it in triple backticks, e.g. \```code goes here\```. Use this to perform calculations. |
+| System    | You can write and execute Python code by enclosing it in triple backticks, e.g. <br>\```code goes here\```.<br> Use this to perform calculations. |
 | --------- | ------------------------------------------------------------ |
 | user      | Find all real-valued roots of the following polynomial: 3*x**5 - 5*x**4 - 3*x**3 - 7*x - 10. |
 | assistant | To find the roots of the polynomial, we can use the `numpy.roots` function in Python. This function computes the roots of a polynomial with coefficients given in a list. The list represents the coefficients of the polynomial from highest degree to lowest.<br/><br/>Here is the Python code to find the roots of the polynomial:<br/><br/>\```python<br/>import numpy as np<br/><br/># Coefficients of the polynomial<br/>coeff = [3, -5, -3, 0, -7, -10]<br/><br/># Compute the roots<br/>roots = np.roots(coeff)<br/><br/># Print only real roots<br/>real_roots = [root for root in roots if np.isreal(root)]<br/>print(real_roots)<br/>```<br/>Please note that the roots may not be exact due to numerical precision issues. Also, the roots are not guaranteed to be real; they could be complex numbers. The code above filters out only the real roots. |
