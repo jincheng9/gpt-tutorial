@@ -73,7 +73,7 @@ OpenAI官方详细介绍了ChatGPT使用的最佳实践，不仅适用于使用C
 
 
 
-以下是一个示例，模型给的回答(Submitted Answer)只是标准答案(Expert Answer)内容的一个子集，和标准答案之间没有内容上的冲突。
+以下是一个示例，模型给的回答(Submitted Answer)只是标准答案(Expert Answer)内容的一个子集，和标准答案之间没有内容上的冲突，标准答案更优。
 
 | system    | \<insert system message above\>                              |
 | --------- | ------------------------------------------------------------ |
@@ -84,7 +84,7 @@ OpenAI官方详细介绍了ChatGPT使用的最佳实践，不仅适用于使用C
 
 
 
-以下是一个示例，模型给的回答(Submitted Answer)与标准答案(Expert Answer)有冲突。
+以下是一个示例，模型给的回答(Submitted Answer)与标准答案(Expert Answer)有冲突，模型给的回答是错误的。
 
 | system    | \<insert system message above\>                              |
 | --------- | ------------------------------------------------------------ |
