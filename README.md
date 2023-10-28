@@ -13,6 +13,7 @@
 * [ChatGPT最佳实践系列-第4篇](./chatgpt/blog06.md)
 * [ChatGPT最佳实践系列-第5篇](./chatgpt/blog07.md)
 * [ChatGPT最佳实践系列-第6篇](./chatgpt/blog08.md)
+* [ChatGPT最佳实践系列-第7篇](./chatgpt/blog09.md)
 
 
 
