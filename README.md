@@ -14,6 +14,7 @@
 * [ChatGPT最佳实践系列-第5篇](./chatgpt/blog07.md)
 * [ChatGPT最佳实践系列-第6篇](./chatgpt/blog08.md)
 * [ChatGPT最佳实践系列-第7篇](./chatgpt/blog09.md)
+* [OpenAI在寻找数据合作伙伴啦](./chatgpt/blog10.md)
 
 
 
