@@ -80,4 +80,4 @@ OpenAI承诺不会使用ChatGPT Team和ChatGPT Enterprise的对话记录用于�
 
 ## References
 
-* https://openai.com/blog/data-partnerships
+* https://openai.com/blog/introducing-the-gpt-store
