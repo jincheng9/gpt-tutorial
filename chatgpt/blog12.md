@@ -28,6 +28,10 @@ ChatGPT Team使用地址：[Start now](https://chat.openai.com/#pricing)
 
 
 
+ChatGPT Team计划和ChatGPT Plus，以及ChatGPT Enterprise的更多区别可以参考：https://openai.com/chatgpt/pricing和References里的资料。
+
+
+
 ## 总结
 
 文章和示例代码开源在GitHub: [GPT实战教程](https://github.com/jincheng9/gpt-tutorial)，可以看到所有主流的开源LLM。

@@ -17,6 +17,7 @@
 * [OpenAI在寻找数据合作伙伴啦](./chatgpt/blog10.md)
 * [一文读懂GPT Store](./chatgpt/blog11.md)
 * [OpenAI发布ChatGPT Team](./chatgpt/blog12.md)
+* [OpenAI发布新的embedding模型和API更新](./chatgpt/blog13.md)
 
 
 
