@@ -73,7 +73,7 @@ OpenAI发布了2个新的embedding模型：一个小巧但是高效的text-embed
 | ---------------------- | -------------------- |
 | text-embedding-3-small | $0.00002 / 1K tokens |
 | text-embedding-3-large | $0.00013 / 1K tokens |
-| ada v2                 | $0.00010 / 1K tokens |
+| text-embedding-ada-002 | $0.00010 / 1K tokens |
 
 ## 总结
 
