@@ -1,4 +1,4 @@
-# OpenAI发布新的embedding模型和API更新
+# OpenAI升级GPT模型和API
 
 ## 背景
 
@@ -49,7 +49,7 @@ OpenAI目前免费的审查API可以帮助开发者检测出有害内容。
 
 这次发布的新审查模型叫text-moderation-007，是OpenAI目前最稳定的审查模型。
 
-如果你在开发的时候指定模型为text-moderation-latest或者text-moderation-stable，都会自动只想这个text-moderation-007新模型。
+如果你在开发的时候指定模型为text-moderation-latest或者text-moderation-stable，都会自动指向这个text-moderation-007新模型。
 
 如果你想构建安全的AI系统，可以参考 [safety best practices guide](https://platform.openai.com/docs/guides/safety-best-practices)。
 
@@ -65,7 +65,7 @@ OpenAI在接下来的几个月里，会进一步优化API key的管理和使用�
 
 ## 升级embedding模型和降价
 
-OpenAI发布了2个新的embedding模型：一个小巧但是高效的text-embedding-3-small模型和一个规模更大效果更好地text-embedding-3-large模型。
+OpenAI发布了2个新的embedding模型：一个小巧但是高效的text-embedding-3-small模型和一个规模更大效果更好的text-embedding-3-large模型。
 
 在此之前，OpenAI的embedding模型是2022年12月发布的text-embedding-ada-002模型。
 
