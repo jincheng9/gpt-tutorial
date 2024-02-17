@@ -18,6 +18,7 @@
 * [一文读懂GPT Store](./chatgpt/blog11.md)
 * [OpenAI发布ChatGPT Team](./chatgpt/blog12.md)
 * [OpenAI发布新的embedding模型和API更新](./chatgpt/blog13.md)
+* [OpenAI发布史上最强大的文生视频模型Sora](./chatgpt/blog14.md)
 
 
 
