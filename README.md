@@ -48,6 +48,19 @@ https://platform.openai.com/docs/models/model-endpoint-compatibility
 
 
 
+# 主要玩家
+
+海外大模型主要玩家：
+
+* OpenAI: GPT
+* Google: Gemini 
+* Meta: LLAMA
+* Anthropic: Claude
+
+在比较模型能力的时候，海外主要对标这几家公司的大模型
+
+
+
 ## 开源模型
 
 | Model            | 作者                                        | 参数量                                          | 训练数据量(tokens)                                           | 训练成本                                                     | 对中英文的支持 |
