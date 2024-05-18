@@ -59,6 +59,10 @@ https://platform.openai.com/docs/models/model-endpoint-compatibility
 
 在比较模型能力的时候，海外主要对标这几家公司的大模型
 
+比如Anthropic比较各家模型能力：https://www.anthropic.com/news/claude-3-family
+
+比如OpenAI比较各家模型能力：https://openai.com/index/hello-gpt-4o/
+
 
 
 ## 开源模型
