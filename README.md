@@ -28,6 +28,26 @@
 
 
 
+# 模型多模态能力
+
+| 模型               | 能力                                           | 备注                                                         |
+| ------------------ | ---------------------------------------------- | ------------------------------------------------------------ |
+| GPT-4o             | 输入：文、图、音频、视频<br>输出：文、图、音频 | API目前(2024.05.18)只能使用GPT-4o的文->文和图->文能力<br>https://openai.com/index/hello-gpt-4o/ |
+| GPT-4 Turbo、GPT-4 | 文->文、图->文                                 | chat completions API支持图片作为input                        |
+| GPT-3.5            | 文->文                                         | 不支持 图->文                                                |
+| DALL.E 3           | 文->图                                         | 暂时不支持图生图                                             |
+| DALL.E 2           | 文->图、图->图                                 | DALL.E 2有图片编辑或者生成已有图片变种的功能                 |
+| TTS                | 文 -> 音频                                     |                                                              |
+| Whisper            | 音频->文                                       |                                                              |
+
+OpenAI每个API支持哪些模型可以参考如下官方说明：
+
+https://platform.openai.com/docs/models/model-endpoint-compatibility
+
+比如文生图的API `/v1/images/generations`只支持DALL.E 3和DALL.E 2这2个模型，图片编辑API `v1/images/edits`和图片变种API `v1/images/variations`只支持DALL.E 2模型。
+
+
+
 ## 开源模型
 
 | Model            | 作者                                        | 参数量                                          | 训练数据量(tokens)                                           | 训练成本                                                     | 对中英文的支持 |
