@@ -82,6 +82,15 @@ OpenAI正在努力提高使用上限，并使ChatGPT能够自动为给定的prom
 
 [Tier 5](https://platform.openai.com/docs/guides/rate-limits/usage-tiers)条件的API**开发者**今天就可以开始使用这两种模型的API。
 
+| TIER   | QUALIFICATION                                                | USAGE LIMITS    |
+| ------ | ------------------------------------------------------------ | --------------- |
+| Free   | User must be in an [allowed geography](https://platform.openai.com/docs/supported-countries) | $100 / month    |
+| Tier 1 | $5 paid                                                      | $100 / month    |
+| Tier 2 | $50 paid and 7+ days since first successful payment          | $500 / month    |
+| Tier 3 | $100 paid and 7+ days since first successful payment         | $1,000 / month  |
+| Tier 4 | $250 paid and 14+ days since first successful payment        | $5,000 / month  |
+| Tier 5 | $1,000 paid and 30+ days since first successful payment      | $50,000 / month |
+
 API调用速率限制为每分钟20次请求。OpenAI在进行额外测试后正在努力增加这些限制。
 
 **注意：** o1-preview和o1 mini的API当前不包括函数调用、流式处理、对系统消息的支持以及其他功能。要开始，请查看[API文档](http://platform.openai.com/docs/guides/reasoning)。
